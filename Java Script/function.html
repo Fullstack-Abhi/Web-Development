@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Function</h1>
+    <script>
+
+ /*       
+        function demo() {
+            console.log('This is java script function');
+        }
+        demo(); //function defination , function decleration ,function statement
+
+        //type
+
+        function data(a, b) {
+            console.log(a + b);
+        }
+        data(34, 35);
+
+        //OR
+
+        function data1(x, y) {
+            let hello = x * y;
+            console.log(hello);
+        }
+        data1(15, 20);  // function expression
+
+        (function () {
+            let a = 10;
+            let b = 20;
+            console.log(a * b);
+        })()                              //iife-immediatly involk function expression
+
+        let hello = (p) => {
+            return p * 10;
+        }
+        console.log(hello(5));
+
+        // OR
+
+        let hellow = (q, r) => {
+            return q * r;
+        }
+        console.log(hellow(5, 8));      //arrow function
+
+*/
+
+        // ARRAY FUNCTION
+
+        //       let array =[1,2,3,4,5];
+        //        let array2 =array.map((item)=> item+5);
+        //       console.log(array); //       console.log(array2);
+
+        //        let array =[1,2,3,4,5];
+        //      let array3 =array.filter((val)=>val<3);
+        //        console.log(array);
+        //        console.log(array3);
+
+        /* let array =[1,2,3,4,5];
+        let array3 =array.reduce((prev,curr)=>curr=prev-curr);
+        console.log(array);
+        console.log(array3); */
+
+        // FUNCTION METHODS
+
+        let array=[1,2,3,4,5];
+        let array2=[6,7,8,9,10];
+        array.push.apply(array,array2);
+        console.log(array);
+
+
+        let app={
+            a:function(s,c){
+                return this.n +' '+ s + ' ' +c ;
+            }
+        }
+        let object={
+            n:'ABHIJEET'
+        }
+       let out= app.a.apply(object,['patil','kolhapur']);// in apply method argument pass in [] bracess
+        console.log(out);
+       
+        console.log("===================================================================================");
+ //========================================================================================================      
+       
+        let obj={
+            name: 'abhi',
+            age:23,
+            city:'Kolhapur',
+            result:function(){
+                console.log("my name is : "+this.name);
+                console.log("my age is : "+this.age);
+                console.log("my city is : "+this.city);
+            }
+        }
+        let obj1 ={
+            name:'Kisss',
+            age:20,
+            city:'latur'
+        }
+        let hi=obj.result.bind(obj1);
+        hi() 
+
+ //========================================================================================================  
+ console.log("===================================================================================");
+
+        function demos(id,name){
+            this.id=id;
+            this.name=name;
+        }
+        function demos1(){
+            demos.call(this,id,name);
+        }
+        let data = new demos(1,'Abhijeet');
+        let data1 = new demos(2,'Krushna');
+
+        console.log(data.id +" "+ data.name);
+        console.log(data1.id +" "+ data1.name);
+
+        console.log("===================================================================================");
+
+
+        let call={
+            a:function(s,c){
+                return this.n +' '+ s + ' ' +c ;
+            }
+        }
+        let objectc={
+            n:'ABHIJEET'
+        }
+       let outc= call.a.call(objectc,'patil','kolhapur');// in call method argument pass seperatly
+        console.log(outc);
+
+
+ //========================================================================================================  
+ console.log("===================================================================================");
+        let view =new String('this is String methods');
+       let result = view.toString();
+       console.log(result);
+
+    </script>
+
+</body>
+
+</html>

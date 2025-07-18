@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Destructuring of array and object</h1>
+
+    <script>
+        let arr =['abhi',21,'patil',[1,2]];
+        let[name,ag=23,siname, [first,second]]=arr;
+        console.log(name);
+        console.log(ag);
+        console.log(first);
+    
+        let obj ={
+            name:'Abhi',
+            age:23,
+            sname:'patil',
+            calender:{
+                date:2,
+                yesr:2025
+            
+            }
+        }
+
+        let {name:kiss,age,sname,calender:{date,year}}=obj;
+        console.log(age);
+        console.log(kiss);
+        console.log(date);
+
+    </script>
+</body>
+</html>

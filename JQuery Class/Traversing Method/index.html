@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing Methods</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        body{
+            text-align: center;
+            border: 2px solid black;
+            margin: auto;
+            padding: 10px;
+        }
+        #main-outer{
+            border: 2px solid black;
+            margin: auto;
+            padding: 10px;
+            background-color: red;
+        }
+        #outer{
+            border: 2px solid black;
+            margin: auto;
+            padding: 10px;
+            background-color: yellow;
+        }
+        #inner{
+            border: 2px solid black;
+            margin: auto;
+            padding: 10px;
+            height: 200px;
+            background-color: pink;
+        }
+        #id1,#id2,#id3,#id4,#id5{
+            border: 2px solid black;
+            margin: 5px 10px 10px 20px;
+            padding: 10px;
+            display: inline;
+            width: 30px;
+        }
+        #id1{
+            background-color: blue;
+        }
+        #id2{
+            background-color: orange;
+        }
+        #id3{
+            background-color: rebeccapurple;
+        }
+        #id4{
+            background-color: chartreuse;
+        }
+        #id5{
+            background-color: burlywood;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Traversing Method</h1>
+    <div id="main-outer">
+        <h2>Main Outer</h2>
+        <div id="outer">
+            <h2 class="demo">Outer</h2>
+            <div id="inner">
+                <h2>Inner</h2>
+
+                <div id="id1">A</div>
+                <div id="id2">B</div>
+                <div id="id3">C</div>
+                <div id="id4">D</div>
+                <div id="id5">E</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            //$('#inner').parent().css('backgroundColor','green');
+            //$('#inner').parents();
+             $('#inner').parentsUntil();
+          //  $('#main-outer').children().css('pink');
+          //  $('#main-outer').find("span");
+
+
+          //SIBLINGS
+
+            // $('#id3').siblings().css('backgroundColor','crimson');
+            // $('#id3').next().css('backgroundColor','blue');
+            // $('#id3').nextAll().css('backgroundColor','blue');
+            // $('#id1').nextUntil('#id4').css('backgroundColor','blue');
+            // $('#id4').prev().css('backgroundColor','blue');
+            // $('#id4').prevAll().css('backgroundColor','blue');
+            //$('#id5').prevUntil('#id2').css('backgroundColor','blue');
+            
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>filetr</h1>
+
+    <div id="id1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        <p class="hello">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p> -->
+    </div>
+
+    <ul>
+        <li>black</li>
+        <li>orange</li>
+        <li>red</li>
+        <li>blue</li>
+    </ul>
+
+    <div id="id2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        <p class="hello">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p> -->
+    </div>
+
+    <ul>
+        <li>black</li>
+        <li>orange</li>
+        <li>red</li>
+        <li>blue</li>
+    </ul>
+
+    <script>
+        $(document).ready(function(){
+            $('#id1 p').first().css('backgroundColor','blue')
+        })
+
+         $(document).ready(function(){
+            $('#id1 p').last().css('backgroundColor','blue')
+        })
+
+         $(document).ready(function(){
+            $('#id1 p').eq(2).css('backgroundColor','blue')
+        })
+
+         $(document).ready(function(){
+            $('#id1').filter("p").css('backgroundColor','blue')
+        })
+    </script>
+</body>
+</html>

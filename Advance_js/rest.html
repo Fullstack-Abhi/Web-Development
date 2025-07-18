@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>rest operator</h1>
+
+    <script>
+        function demo(...a){
+            console.log(a);
+        }
+        demo(5,6,4,2,3)
+
+  /*      function demo(a){
+            console.log(a);
+        }
+        demo(5,6,4,2,3)
+  */
+
+         function demo1(...args){
+            let b=0;
+            for(let i in args){
+                b=b+args[i];
+            }
+            console.log(b);
+        }
+        demo1(5,6,4,2,3)
+
+    </script>
+</body>
+</html>

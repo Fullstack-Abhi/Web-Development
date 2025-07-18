@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 50px;
+        }
+        .btn {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <form class="form" >
+        <label>First number:</label>
+        <input id="num1" type="number">
+
+        <label>Operator (+, -, *, /):</label>
+        <input id="op" type="text">
+
+        <label>Second number:</label>
+        <input id="num2" type="number">
+
+        <button class="btn" type="submit" onclick="cal()">Calculate</button>
+    </form>
+
+    <h5 id="res">Result: </h5>
+
+    <script>
+        function cal() {
+            event.preventDefault();  // Prevent form from reloading the page
+
+            let num1 = parseFloat(document.getElementById('num1').value.trim());
+            let num2 = parseFloat(document.getElementById('num2').value.trim());
+            let operator = document.getElementById('op').value.trim();
+            let result;
+
+            if (operator === '+') {
+                result = num1 + num2;
+            } else if (operator === '-') {
+                result = num1 - num2;
+            } else if (operator === '*') {
+                result = num1 * num2;
+            } else if (operator === '/') {
+                result = num2 !== 0 ? num1 / num2 : 'Error (div by zero)';
+            } else {
+                result = 'Invalid operator';
+            }
+
+            document.getElementById('res').innerText = 'Result: ' + result;
+        }
+    </script>
+</body>
+</html>

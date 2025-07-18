@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <Style>
+        body{
+            background-color: rgb(0, 0, 63);
+        }
+        .shadow{
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin: auto;
+            margin-top: 15%;
+            animation-name: demo;
+            animation-delay: 1s;
+            animation-timing-function: ease-in-out;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+           
+            
+        }
+
+        @keyframes demo{
+            0%{
+                box-shadow: -15px 15px 0px -5px blanchedalmond;
+            }
+            50%{
+                box-shadow: 0px 0px 0px 1px blanchedalmond;
+            }
+            100%{
+                box-shadow: 15px -15px 0px -5px blanchedalmond;
+            }
+        }
+            
+        
+    </Style>
+</head>
+<body>
+    <div class="shadow"></div>
+</body>
+</html>

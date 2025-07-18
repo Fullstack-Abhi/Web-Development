@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS object</h1>
+    <script>
+        //  let obj={
+        //     name:"Srushti",
+        //     age:24,
+        //     city:'pune'
+        //  }
+        //  console.log(obj);  //object declaration
+
+         // methods
+        //  let obj={
+        //     name:"Srushti",
+        //     age:24,
+        //     city:'pune'
+        //  }
+        //  let obj1=Object.keys(obj);
+        //  console.log(obj1);          //object.keys method
+
+
+        // let obj={
+        //     name:"Srushti",
+        //     age:24,
+        //     city:'pune'
+        //  }
+        //  let obj1=Object.values(obj);
+        //  console.log(obj1);            //object.values method
+
+        // let obj={
+        //     name:"Srushti",
+        //     age:24,
+        //     city:'pune'
+        //  }
+        //  console.log(obj);
+
+        //  let obj1=Object.assign(obj);
+        //  obj1.name='amit';
+        //  obj1.age=32;
+        //  obj.company='city-info';
+        //  console.log(obj1);       //object.assign method we can assigne new values and also add new data also
+         
+         
+        // let obj={
+        //     name:"Srushti",
+        //     age:24,
+        //     city:'pune'
+        //  }
+        //  console.log(obj);
+        //  let obj1=Object.freeze(obj);
+        //  obj1.name='amit';
+        //  obj1.age=32;
+        //  obj.company='city-info';
+        //  console.log(obj1);          //in freeze method we cannot modify data it shows only existing data
+
+
+        let obj={
+            name:"Srushti",
+            age:24,
+            city:'pune'
+         }
+         console.log(obj);
+         let obj1=Object.seal(obj);
+         obj1.name='amit';
+         obj1.age=32;
+         obj.company='city-info';
+         console.log(obj1);       // in seal method only key value objects are shown and we add value in assign is not shown in seal method
+          
+    </script>
+</body>
+</html>

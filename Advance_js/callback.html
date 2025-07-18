@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>callback</h1>
+
+    <script>
+        function data(x,y,callback){
+            console.log(x+y);
+            callback();
+
+        }
+
+
+        function data1(){
+            console.log("hellow Abhijeet");
+        }
+
+        function data2(){
+            console.log("By");
+        }
+
+        data(2,3,data1);
+        let x=10;
+        let y=20;
+        data(x,y,data2)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="gray">
+   <center>
+    <form action="">
+
+        <fieldset>
+            <legend>Registration Form</legend>
+
+    <h1 style="display: inline; color:orange">R</h1> <h1 style="display: inline;">egistration Form</h1><br><br>
+       
+    <table bgcolor="lightgray" cellspacing="9px">
+        
+            <tr>
+                <th><label for="Name">Name</label></th>
+                <th>:</th>
+                <td><input type="text" placeholder="Enter your name" maxlength="5" required></td>
+            </tr>
+            <tr>
+                <th><label for="number">Ph. number</label></th>
+                <th>:</th>
+                <td><input type="number" placeholder="Enter mobile number" required></td>
+            </tr>
+            <tr>
+                <th><label for="email">Email</label></th>
+                <th>:</th>
+                <td><input type="email" placeholder="Enter email" required></td>
+            </tr>
+            <tr>
+                <th><label for="password">Password</label></th>
+                <th>:</th>
+                <td><input type="password" placeholder="Enter password" required></td>
+            </tr>
+            <tr>
+                <th><label for="color">Color</label></th>
+                <th>:</th>
+                <td><input type="color" required></td>
+            </tr>
+            <tr>
+                <th><label for="time">Time</label></th>
+                <th>:</th>
+                <td><input type="time" required></td>
+            </tr>
+
+            <tr>
+                <th><label for="date">Date</label></th>
+                <th>:</th>
+                <td><input type="date" required></td>
+            </tr>
+            <tr>
+                <th><label for="range">Range</th>
+                <th>:</th>
+                <td><input type="range" required></td>
+            </tr>
+            <tr>
+                <th><label for="Docment">File</th>
+                <th>:</th>
+                <td><input type="file" required></td>
+            </tr>
+            <tr>
+                <th><label for="radio">Radio</label></th>
+                <th>:</th>
+                <td><input type="radio" name="a" required>Male
+                    <input type="radio" name="a" required>Female
+                    <input type="radio" name="a" required>Other
+                </td>                    
+            </tr>
+            <tr>
+                <th><label for="Chechbox">Chechbox</label></th>
+                <th>:</th>
+                <td><input type="checkbox" required>Marathi <input type="checkbox" required>Hindi <input type="checkbox" required>English </td>
+            </tr>
+
+            <tr>
+                <th><label for="feedback">Feedback</th>
+                <th>:</th>
+                <td><textarea placeholder="Enetr your feedback" required></textarea></td>
+            </tr>
+            <tr>
+                <th><label for="select">Select</th>
+                <th>:</th>
+                <td><select name="" id="">
+                    <option value="Country">State</option>
+                    <option value="">Maharastra</option>
+                    <option value="">Karnataka</option>
+                    <option value="">Zammu Kashmir</option>
+                    <option value="">Himachal Pradesh</option>
+                    <option value="">Panjab</option>
+                    <option value="">Uttrakhand</option>
+                    <option value="">Hariyana</option>
+                    <option value="">Uttar Pradesh</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="optgroup">optgroup</label></th>
+                <th>:</th>
+                <td>
+                    <select name="" id="">
+                    <optgroup label="Maharashtra">
+                        <option value="Kolhapur">Kolhapur</option>
+                        <option value="Satara">Satara</option>
+                    </optgroup>
+
+                    <optgroup label="Karnatka">
+                        <option value="Belhgavn">Belhgavn</option>
+                        <option value="Bengluru">Bengluru</option>
+                    </optgroup>
+                </select>
+            </td>
+            </tr>
+
+            <tr>
+                <td colspan="3" align="center"><button>Submit</button></td>
+            </tr>
+            
+        </table>
+    </fieldset>
+    </form>
+    <br>
+    <br>
+
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="number" value="a" id="a" >+<input type="number" id="b" value="b">=<output name="x" for="a b">Result :</output>
+
+        </form>
+        
+   </center>
+</body>
+</html>

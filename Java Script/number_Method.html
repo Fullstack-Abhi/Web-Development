@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Number Method</h1>
+
+    <script>
+        let demo =45.6554
+        let a=Number.parseInt(demo);
+        console.log(a);
+
+        let b=Number.parseFloat(demo);
+        console.log(b);
+
+        let c=Number.isInteger(demo);
+        console.log(c);
+
+        let d=Number.isFinite(demo);// check given number is number or not its number return true 
+        console.log(d);
+
+       // let e=demo.toFixed(2);
+       let e=demo.toFixed(3);//after . point count will be start and last number increment by 1 if next value is greter than equal to 5. 
+        console.log(e);
+
+        let f=demo.toPrecision(4);//it can check number from start and last number increment by 1 if next value is greter than equal to 5.
+        console.log(f);
+    </script>
+
+</body>
+</html>

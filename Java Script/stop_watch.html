@@ -1,0 +1,316 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: gray;
+            font-family: Arial, sans-serif;
+        }
+        h1 span {
+            color: orange;
+        }
+        .demo {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        .hello {
+            font-size: 50px;
+            color: white;
+            margin: 0 5px;
+        }
+        .text {
+            font-size: 20px;
+            color: white;
+            margin-right: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 15px;
+            background-color: rgba(255, 20, 145, 0.7);
+            color: white;
+            margin: 5px;
+            cursor:pointer;
+            border: none;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .time {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo">
+        <h1><span>Stop</span> Watch</h1>
+
+        <div class="time">
+            <span class="hello" id="hr">00</span>
+            <span class="text">hr</span>
+            <span class="hello" id="min">00</span>
+            <span class="text">Min</span>
+            <span class="hello" id="sec">00</span>
+            <span class="text">Sec</span>
+            <span class="hello" id="msec">00</span>
+            <span class="text">MSec</span>
+        </div>
+
+        <div class="but">
+            <button class="btn" onclick="start()">Start</button>
+            <button class="btn" onclick="stop()">Stop</button>
+            <button class="btn" onclick="reset()">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        let MSec = 0;
+        let sec = 0;
+        let min = 0;
+        let hr = 0;
+        let timer = null;
+
+        function stopwatch() {
+            MSec += 10;
+            if (MSec === 1000) {
+                MSec = 0;
+                sec++;
+                if (sec === 60) {
+                    sec = 0;
+                    min++;
+                    if (min === 60) {
+                        min = 0;
+                        hr++;
+                    }
+                }
+            }
+
+            let h = hr < 10 ? "0" + hr : hr;
+            let m = min < 10 ? "0" + min : min;
+            let s = sec < 10 ? "0" + sec : sec;
+            let ms = MSec.toString().padStart(3, '0');
+
+            document.getElementById('hr').innerText = h;
+            document.getElementById('min').innerText = m;
+            document.getElementById('sec').innerText = s;
+            document.getElementById('msec').innerText = ms.slice(0, 2); // show centiseconds
+        }
+
+        function start() {
+            if (timer !== null) {
+                clearInterval(timer);
+            }
+            timer = setInterval(stopwatch, 10);
+        }
+
+        function stop() {
+            clearInterval(timer);
+        }
+
+        function reset() {
+            clearInterval(timer);
+            hr = 0;
+            min = 0;
+            sec = 0;
+            MSec = 0;
+            document.getElementById('hr').innerText = "00";
+            document.getElementById('min').innerText = "00";
+            document.getElementById('sec').innerText = "00";
+            document.getElementById('msec').innerText = "00";
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+<!-- ========================================================================================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch with Milliseconds</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: gray;
+            font-family: Arial, sans-serif;
+        }
+        h1 span {
+            color: orange;
+        }
+        .demo {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        .hello {
+            font-size: 50px;
+            color: white;
+            margin: 0 5px;
+        }
+        .text {
+            font-size: 20px;
+            color: white;
+            margin-right: 10px;
+        }
+        .btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 15px;
+            background-color: rgba(255, 20, 145, 0.7);
+            color: white;
+            margin: 5px;
+            cursor:pointer;
+            border: none;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .time {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo">
+        <h1><span>Stop</span> Watch</h1>
+
+        <div class="time">
+            <span class="hello" id="hr">00</span>
+            <span class="text">hr</span>
+            <span class="hello" id="min">00</span>
+            <span class="text">Min</span>
+            <span class="hello" id="sec">00</span>
+            <span class="text">Sec</span>
+            <span class="hello" id="msec">00</span>
+            <span class="text">MSec</span>
+        </div>
+
+        <div class="but">
+            <button class="btn" id="start">Start</button>
+            <button class="btn" id="stop">Stop</button>
+            <button class="btn" id="reset">Reset</button>
+        </div>
+    </div>
+
+    <script>
+       let startbtn=document.getElementById('start');
+       let stopbtn=document.getElementById('stop');
+       let resetbtn=document.getElementById('reset');
+       let hour=0;
+       let minute=0;
+       let second=0;
+       let msec=0;
+       let timer=true;
+
+       startbtn.addEventListener('click',function(){
+       timer=true;
+        while(time=true){
+            stopwatch();   
+        }
+        time=false;
+        
+       });
+
+       stopbtn.addEventListener('click',function(){
+        timer=false;
+       });
+
+       resetbtn.addEventListener('click',function(){
+        timer=false;
+        hour='0';
+        minute='0';
+        second='0';
+        msec='0';
+
+        document.getElementById('hr').innerHTML="00";
+        document.getElementById('min').innerHTML="00";
+        document.getElementById('sec').innerHTML="00";
+        document.getElementById('msec').innerHTML="00";
+        
+
+       });
+
+
+       function stopwatch(){
+        if(timer){
+            msec++;
+
+            if(msec==100){
+                second++;
+                msec=0;
+            }
+
+            if(second==60){
+                minute++;
+                second=0;
+            }
+
+            if(minute==60){
+                hour++;
+                minute=0;
+                second=0;
+            }
+
+            let hr=hour;
+            let min=minute;
+            let sec=second;
+            let ms=msec;
+
+            if(hour<10){
+                hr='0'+hr;
+            }
+
+            if(minute<10){
+                min='0'+min;
+            }
+
+            if(second<10){
+                sec='0'+sec;
+            }
+
+            if(msec<10){
+                ms='0'+ms;
+            }
+
+            document.getElementById('hr').innerHTML=hr;
+            document.getElementById('min').innerHTML=min;
+            document.getElementById('sec').innerHTML=sec;
+            document.getElementById('msec').innerHTML=ms;
+
+            let set=setTimeout(stopwatch,10);
+        }
+       }
+    </script>
+</body>
+</html>

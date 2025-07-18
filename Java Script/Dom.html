@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Document Object Model (DOM)</h1>
+
+    <p id="id1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum laboriosam assumenda, nobis repellendus tenetur, nulla at rem fugiat officia, rerum distinctio quam. Libero veniam quis ipsum vero nisi! Quo, nobis?</p>
+
+    <p class="data">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non rem saepe quia facilis cupiditate iure, fuga, eius sit obcaecati architecto magni recusandae commodi enim quas ipsa aperiam alias nulla adipisci!</p>
+    <p class="data">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non rem saepe quia facilis cupiditate iure, fuga, eius sit obcaecati architecto magni recusandae commodi enim quas ipsa aperiam alias nulla adipisci!</p>
+
+    <!-- <script>
+        let element=document.getElementById('id1');
+        console.log(element);
+
+        let clas=document.getElementsByClassName('data');
+        console.log(clas);
+
+        let tag=document.getElementsByTagName('p');
+        console.log(tag);
+
+        let query =document.querySelector('.data');
+        console.log(query);
+
+        let queryAll =document.querySelectorAll('#id1,.data,p');
+        console.log(queryAll);
+
+    </script> -->
+
+
+<!-- =========================================================================================== -->
+<!-- 
+    <div id="id5">
+        <h1>Document Object Model (DOM)</h1>
+    <p>Lorem ipsum dolor sit, 
+        amet consectetur adipisicing elit.
+        error doloremque culpa at.
+    </p>
+    <h2>Hello This is <span>HTML</span> modifying        methods,</h2>
+    </div>
+
+    <script>
+        let demo =document.getElementById('id5').innerHTML;
+        console.log(demo);
+
+        let demo2 =document.getElementById('id5').innerText;
+        console.log(demo2);
+
+        let demo1 =document.getElementById('id5').textContent;
+        console.log(demo1);
+
+    </script> -->
+<!-- ============================================================================================= -->
+<!-- <h1>css modify methods</h1>
+
+<p class="hello">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolor saepe distinctio eaque veniam commodi, et consectetur quis, unde quisquam assumenda accusantium similique quibusdam a eum odio optio. Suscipit, facere.</p>
+<p class="hello">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolor saepe distinctio eaque veniam commodi, et consectetur quis, unde quisquam assumenda accusantium similique quibusdam a eum odio optio. Suscipit, facere.</p>
+<p class="hello">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolor saepe distinctio eaque veniam commodi, et consectetur quis, unde quisquam assumenda accusantium similique quibusdam a eum odio optio. Suscipit, facere.</p>
+<p class="hello">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolor saepe distinctio eaque veniam commodi, et consectetur quis, unde quisquam assumenda accusantium similique quibusdam a eum odio optio. Suscipit, facere.</p>
+
+<script>
+    let ele=document.getElementsByClassName('hello');
+        ele[3].style.backgroundColor='red';
+
+    let el=document.getElementsByClassName('hello');
+        el[2].style.cssText="color:yellow;font-size:40px;border:12px solid black";
+
+    
+</script> -->
+
+<!-- ============================================================================================= -->
+
+<!-- <h1>set attribute</h1>
+
+<a id="id10" href="https://www.flipkart.com/" target="_blank">Amazon</a>
+
+<script>
+    let data =document.getElementById('id10');
+    let hello =data.setAttribute('href','https://www.amazon.in/?tag=msndeskabkin-21&ref=pd_sl_8m0512m97v_e&adgrpid=1317216540160148&hvadid=82326299627209&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=149333&hvtargid=kwd-82326918609608:loc-90&hydadcr=5623_2377284&mcid=f13fcffd1964377ea436bb8da9e6f147')
+</script> -->
+
+
+<!-- ============================================================================================= -->
+
+<h1>get attribute</h1>
+<p id="id11" title="hello this si get attribute method ">heloo</p>
+<button onclick="demod()">Click</button>
+
+<script>
+    function demod(){
+        let data1 =document.getElementById('id11');
+        let elem=data1.getAttribute('title');
+
+        document.write('get attribute here : '+elem);
+        console.log('get attribute here : '+elem);
+        alert('get attribute here : '+elem);
+    }
+</script> 
+
+<!-- ============================================================================================= -->
+<!-- 
+    <h1>addEventListenor</h1>
+
+    <button id="id12">Click</button>
+
+    <h2 id="id13"></h2>
+
+    <script>
+        document.getElementById('id12').addEventListener('click',function(){
+        document.getElementById('id13').innerText='xcvbnm xcvbn .....' ;      
+     })
+    </script> -->
+
+    <!-- ============================================================================================= -->
+
+    <!-- <h1 style="text-align: center; color:blue">set Interval</h1>
+
+    <div id="id14" style="height: 100px; width:100px; border:2px solid black; background-color:pink"></div> 
+
+    <script>
+        let a=10;
+        let demo3=setInterval(data1,2000);
+
+        function data1(){
+            a=a+10;
+            let ele1=document.getElementById('id14');
+            ele1.style.marginLeft= a + 'px';
+        }
+    </script> -->
+
+
+
+    <!-- <h1 style="text-align: center; color:blue">set Interval</h1>
+
+    <div id="id14" style="height: 100px; width:100px; border:2px solid black; background-color:pink"></div> 
+    <script>
+        let a=10;
+        let demo3=setInterval(data1,1000);
+
+        function data1(){
+            a=a+10;
+            if(a==100){
+                clearInterval(demo3);
+            }
+            else{
+                let ele1=document.getElementById('id14');
+                ele1.style.marginLeft= a + 'px'; 
+            }
+        }
+    </script> -->
+
+     <!-- ============================================================================================= -->
+
+     <!-- <h1 style="text-align: center; color:blue">setTimeout</h1>
+
+     <div id="id15" style="height: 100px; width:100px; border:2px solid black; background-color:pink"></div>
+     
+     <button onclick="stop()">Click</button>
+
+     <script>
+        let element=setTimeout(dem,5000);
+
+        function dem(){
+            let hello=document.getElementById('id15');
+            hello.style.width='500px'
+        }
+
+        function stop(){
+            clearTimeout(element)
+        }
+     </script> -->
+
+</body>
+</html>
